@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+
+  /* overflow-x: scroll; */
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
+  /* flex-wrap: wrap; */
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.row::-webkit-scrollbar {
+  display: none;
+}
+/* .img {
+  object-fit: contain;
+  display: block;
+  width: 200px;
+  padding: 20px;
+  flex-shrink: 0;
+} */
+.img {
+  min-width: 250px;
+  padding: 0 20px 20px;
+}
+.signup {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  /* display: flex;
+  justify-content: center; */
+  /* opacity: 0.5; */
+  /* align-items: center*/
+  position: relative;
+}
+.signup::before {
+  content: "";
+  position: absolute;
+  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/701eec50-4b87-4dc0-9d00-b0f54025dc36/028e62d2-2a59-4fc3-adaa-a0756a0512b9/IN-en-20220905-popsignuptwoweeks-perspective_alpha_website_large.jpg")
+    no-repeat;
+  background-size: cover;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.75;
 }
